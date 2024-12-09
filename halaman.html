@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Sayangku ♡</title>
+    <style>
+        /* Styling untuk body */
+        body {
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Styling untuk simbol hati */
+        .heart {
+            color: red;
+            font-size: 50px;
+        }
+
+        /* Styling untuk pesan */
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        /* Styling untuk tombol */
+        .button {
+            background-color: #ff6666;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        /* Efek hover untuk tombol */
+        .button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Halaman Bucin</h1>
+    <h2>by Alena</h2>
+
+    <div class="heart">&#10084;&#65039;</div>
+    <div class="message">Klik tombol untuk pesan ini sayang!</div>
+
+    <button class="button" onclick="showMessage()" aria-label="Show love message">Klik di sini</button>
+    <div id="loveMessage"></div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                "Aku sayang kamu lebih dari kata-kata bisa ungkapkan.",
+                "Kamu adalah alasan aku tersenyum setiap hari.",
+                "Hidupku menjadi lebih indah sejak ada kamu.",
+                "Kamu adalah bintang di langitku.",
+                "Cintaku padamu tak akan pernah pudar."
+            ];
+
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("loveMessage").innerHTML = `<p>${randomMessage}</p>`;
+        }
+    </script>
+
+    <center>
+        <audio controls aria-label="Love song">
+            <source src="y.ogg" type="audio/ogg">
+            <source src="y.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </center>
+</body>
+
+</html>
